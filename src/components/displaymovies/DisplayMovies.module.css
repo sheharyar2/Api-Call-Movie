@@ -1,0 +1,104 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    margin: 0 auto;
+    padding: 20px 0px;
+   
+}
+.container_child {
+    margin: 10px; /* Adds margin around each child if gap in parent isn't used */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+    background: rgb(4, 35, 77); /* Background color for each child */
+    border: 2px solid white; /* Optional: rounds corners */
+    width: 375px;
+    height: 700px;
+}
+.main_image{
+    width: 100%;
+    height: 380px;
+}
+.main_image img{
+    width: 100%;
+    height: 100%;
+}
+.movie_heading{
+    padding: 3px 3px 3px 3px;
+    height: 56px;
+    margin: 0px;
+}
+
+
+.movie_heading h1{
+    color: white;
+    font-size: 24px;
+    font-family: Lato,sans-serif;
+}
+.movie_heading p{
+    color: white;
+    font-family: Lato,sans-serif;
+}
+.movie_summary_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding-top: 5px;
+}
+.movie_summary_heading{
+    padding-left: 5px;
+}
+.movie_summary_heading h5{
+    color: white;
+    font-size: 12px;
+    font-family: Lato,sans-serif;
+}
+.movie_like_comments ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 5px;
+}
+.movie_like_comments img{
+    width: 12px;
+    height: 12px;
+}
+.movie_like_comments li span{
+    color: red;
+    font-size: 12px;
+}
+.movie_description{
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 150px;
+}
+.movie_description p{
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+    color: gainsboro;
+}
+.movie_actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.movie_watch_btn button{
+    border-color: red;
+    background-color: transparent;
+    color: red;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+.movie_share img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
