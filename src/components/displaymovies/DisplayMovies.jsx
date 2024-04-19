@@ -24,12 +24,12 @@ function DisplayMovies(){
                 console.log(data);
             setMovies(data.results)})
         .catch(error=>console.error("error : ",error));
-        console.log(typeof(movies));
     },[])
     return(
         <div className={styles.container}>
            {
-            movies.map((movie,index)=>(
+           movies.sort((a,b)=>new Date(a.release_date)-new Date(b.release_date))
+           .map((movie,index)=>(
             <div className={styles.container_child} key={index}>
                 <div className={styles.main_image}>
                     <img src={base_image_url+movie.poster_path} alt="" />
@@ -52,14 +52,12 @@ function DisplayMovies(){
                             <img src={like} alt="" />
                             <li>
                                 <span>{movie.vote_average}</span>
-
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className={styles.movie_description}>
                     <p>{movie.overview}</p>
-
                 </div>
                 <div className={styles.movie_actions}>
                     <div className={styles.movie_watch_btn}>
@@ -72,8 +70,6 @@ function DisplayMovies(){
                 </div>
             </div>
             </div>
-           
-
             ))
            }
             </div>
